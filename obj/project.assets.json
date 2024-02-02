@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zero_\\Desktop\\cripto\\csharp_criptografia\\criptassimetrico.csproj",
+      "projectUniqueName": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptassimetrico.csproj",
       "projectName": "criptassimetrico",
-      "projectPath": "C:\\Users\\zero_\\Desktop\\cripto\\csharp_criptografia\\criptassimetrico.csproj",
+      "projectPath": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptassimetrico.csproj",
       "packagesPath": "C:\\Users\\zero_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zero_\\Desktop\\cripto\\csharp_criptografia\\obj\\",
+      "outputPath": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zero_\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("criptassimetrico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d8d2eab6cc5ee4021fcf0f6a92a33ddb4000f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a419412ef2a1d11dac6db2c9b040f288658e1120")]
 [assembly: System.Reflection.AssemblyProductAttribute("criptassimetrico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("criptassimetrico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

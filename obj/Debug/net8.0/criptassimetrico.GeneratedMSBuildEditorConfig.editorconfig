@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = criptassimetrico
-build_property.ProjectDir = C:\Users\zero_\Desktop\cripto\csharp_criptografia\
+build_property.ProjectDir = D:\meus_documentos\workspace\c_sharp\cripto\csharp_criptografia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

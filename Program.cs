@@ -14,7 +14,7 @@ class Class1
 
     private static void testeCriptografarArquivos(string password = "")
     {
-        //string path = @"D:\meus_documentos\workspace\c_sharp\cripto\criptassimetrico\testesarquivos\";
+        //string path = @"D:\meus_documentos\workspace\c_sharp\cripto\csharp_criptografia\testesarquivos\";
         string aux = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         string path = $@"{aux}\testesarquivos\";
         string arquivoEntrada = $@"{path}arquivo-original.txt";
