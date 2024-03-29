@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCriptografiaOpenSSL));
             label1 = new Label();
             txtPlainText = new TextBox();
             btnCriptografiarOpenSSL = new Button();
@@ -170,6 +171,7 @@
             Controls.Add(txtPlainText);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "frmCriptografiaOpenSSL";
             StartPosition = FormStartPosition.CenterScreen;

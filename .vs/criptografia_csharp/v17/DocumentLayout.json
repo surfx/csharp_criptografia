@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|d:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\criptografia_csharp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|solutionrelative:criptografia_csharp\\criptografia_csharp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|d:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|solutionrelative:criptografia_csharp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|d:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EEF5D3-65A8-4E20-87B7-BAB1A23FE7B3}|criptografia_csharp\\criptografia_csharp.csproj|solutionrelative:criptografia_csharp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "criptografia_csharp",
+              "DocumentMoniker": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\criptografia_csharp.csproj",
+              "RelativeDocumentMoniker": "criptografia_csharp\\criptografia_csharp.csproj",
+              "ToolTip": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\criptografia_csharp.csproj",
+              "RelativeToolTip": "criptografia_csharp\\criptografia_csharp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-29T18:17:38.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\Form1.cs",
+              "RelativeDocumentMoniker": "criptografia_csharp\\Form1.cs",
+              "ToolTip": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\Form1.cs",
+              "RelativeToolTip": "criptografia_csharp\\Form1.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAADcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T16:19:05.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\Form1.cs",
+              "RelativeDocumentMoniker": "criptografia_csharp\\Form1.cs",
+              "ToolTip": "D:\\meus_documentos\\workspace\\c_sharp\\cripto\\csharp_criptografia\\criptografia_csharp\\Form1.cs [Projeto]",
+              "RelativeToolTip": "criptografia_csharp\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T16:19:04.191Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
