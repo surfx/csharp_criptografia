@@ -38,7 +38,7 @@ namespace criptografia_csharp
             if (openssl == null) { return; }
             try
             {
-                txtPlainText.Text = openssl.OpenSSLDecrypt(txtTextoCriptografado.Text);
+                txtPlainText.Text = openssl.OpenSSLDecrypt(txtTextoCriptografado.Text).Replace("\n", Environment.NewLine);
                 txtPlainText.Focus();
             }
             catch (Exception ex)
