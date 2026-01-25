@@ -24,7 +24,8 @@ namespace criptografia_csharp
         private static void testeCriptografarArquivos(string password = "")
         {
             //string path = @"D:\meus_documentos\workspace\c_sharp\cripto\csharp_criptografia\criptografia_csharp\testesarquivos\";
-            string aux = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+            string? aux = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.Parent?.FullName;
+            if (aux == null) return;
             string path = $@"{aux}\testesarquivos\";
             string arquivoEntrada = $@"{path}arquivo-original.txt";
             if (!File.Exists(arquivoEntrada)) { return; }
@@ -38,13 +39,13 @@ namespace criptografia_csharp
             cfiles.CriptFile(arquivoEntrada, arquivoSaida);
             cfiles.DeCriptFile(arquivoSaida, arquivoDecript);
 
-            System.Console.WriteLine("-- análise linha a linha");
+            System.Console.WriteLine("-- anï¿½lise linha a linha");
 
             string[] linhas1 = File.ReadAllLines(arquivoEntrada);
             string[] linhas2 = File.ReadAllLines(arquivoDecript);
 
             bool ok = true;
-            if (linhas1.Length != linhas2.Length) { System.Console.WriteLine("indício de erro"); }
+            if (linhas1.Length != linhas2.Length) { System.Console.WriteLine("indï¿½cio de erro"); }
             int nlines = Math.Min(linhas1.Length, linhas2.Length);
             for (int i = 0; i < nlines; i++)
             {
@@ -53,7 +54,7 @@ namespace criptografia_csharp
                 if (l1 != l2)
                 {
                     ok = false;
-                    System.Console.WriteLine("Divergência '{0}'", l1.Replace(l2, ""));
+                    System.Console.WriteLine("Divergï¿½ncia '{0}'", l1.Replace(l2, ""));
                 }
             }
             System.Console.WriteLine(ok ? "all ok" : "erros encontrados");

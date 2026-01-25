@@ -91,40 +91,32 @@ namespace code.openssl
                 throw new ArgumentNullException("key");
             if (iv == null || iv.Length <= 0)
                 throw new ArgumentNullException("iv");
-            // Declare the stream used to encrypt to an in memory
-            // array of bytes.
-            MemoryStream msEncrypt;
-            // Declare the RijndaelManaged object
-            // used to encrypt the data.
-            RijndaelManaged? aesAlg = null;
-            try
+
+            using (Aes aesAlg = Aes.Create())
             {
-                // Create a RijndaelManaged object
-                // with the specified key and IV.
-                aesAlg = new RijndaelManaged { Mode = CipherMode.CBC, KeySize = 256, BlockSize = 128, Key = key, IV = iv };
+                aesAlg.Mode = CipherMode.CBC;
+                aesAlg.KeySize = 256;
+                aesAlg.BlockSize = 128;
+                aesAlg.Key = key;
+                aesAlg.IV = iv;
+
                 // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
                 // Create the streams used for encryption.
-                msEncrypt = new MemoryStream();
-                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                using (MemoryStream msEncrypt = new MemoryStream())
                 {
-                    using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                     {
-                        //Write all data to the stream.
-                        swEncrypt.Write(plainText);
-                        swEncrypt.Flush();
-                        swEncrypt.Close();
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            //Write all data to the stream.
+                            swEncrypt.Write(plainText);
+                        }
                     }
+                    return msEncrypt.ToArray();
                 }
             }
-            finally
-            {
-                // Clear the RijndaelManaged object.
-                if (aesAlg != null)
-                    aesAlg.Clear();
-            }
-            // Return the encrypted bytes from the memory stream.
-            return msEncrypt.ToArray();
         }
 
         private string DecryptStringFromBytesAes(byte[] cipherText, byte[] key, byte[] iv)
@@ -136,19 +128,18 @@ namespace code.openssl
                 throw new ArgumentNullException("key");
             if (iv == null || iv.Length <= 0)
                 throw new ArgumentNullException("iv");
-            // Declare the RijndaelManaged object
-            // used to decrypt the data.
-            RijndaelManaged aesAlg = null;
-            // Declare the string used to hold
-            // the decrypted text.
-            string plaintext;
-            try
+
+            using (Aes aesAlg = Aes.Create())
             {
-                // Create a RijndaelManaged object
-                // with the specified key and IV.
-                aesAlg = new RijndaelManaged { Mode = CipherMode.CBC, KeySize = 256, BlockSize = 128, Key = key, IV = iv };
+                aesAlg.Mode = CipherMode.CBC;
+                aesAlg.KeySize = 256;
+                aesAlg.BlockSize = 128;
+                aesAlg.Key = key;
+                aesAlg.IV = iv;
+
                 // Create a decrytor to perform the stream transform.
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
                 // Create the streams used for decryption.
                 using (MemoryStream msDecrypt = new MemoryStream(cipherText))
                 {
@@ -158,18 +149,11 @@ namespace code.openssl
                         {
                             // Read the decrypted bytes from the decrypting stream
                             // and place them in a string.
-                            plaintext = srDecrypt.ReadToEnd();
-                            srDecrypt.Close();
+                            return srDecrypt.ReadToEnd();
                         }
                     }
                 }
             }
-            finally
-            {
-                // Clear the RijndaelManaged object.
-                if (aesAlg != null) aesAlg.Clear();
-            }
-            return plaintext;
         }
 
         public byte[] StringToByteArray(string hex)
