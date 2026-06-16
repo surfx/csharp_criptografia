@@ -1,0 +1,16 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/bin/
+/criptografia_csharp/bin/
+/criptografia_csharp/obj/
+/obj/
+/testesarquivos/arquivo-original.txt
+/testesarquivos/decriptado.txt
+/testesarquivos/saida_cript.txt
+/criptassimetrico.csproj
+/criptassimetrico.sln
+/Program.cs
+/.vs/
+publish/
