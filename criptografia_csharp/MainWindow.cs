@@ -15,6 +15,7 @@ namespace criptografia_csharp
         public MainWindow()
         {
             SetTitle("Criptografia OpenSSL");
+            SetupAppIcon();
             SetDefaultSize(1000, 800);
 
             var mainBox = Box.New(Orientation.Vertical, 10);
@@ -83,9 +84,49 @@ namespace criptografia_csharp
             mainBox.Append(bottomControls);
         }
 
+        private void SetupAppIcon()
+        {
+            try
+            {
+                const string iconName = "criptografia_csharp";
+                const string appId = "io.github.emerson.criptografia";
+
+                var home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                var iconThemeDir = Path.Combine(home, ".local", "share", "icons", "hicolor");
+                var appsDir = Path.Combine(home, ".local", "share", "applications");
+                var assetsDir = Path.Combine(AppContext.BaseDirectory, "assets");
+
+                var sizes = new[] { ("32", "cadeado_32.png"), ("48", "cadeado_48.png"), ("128", "cadeado_128.png") };
+                foreach (var (size, file) in sizes)
+                {
+                    var src = Path.Combine(assetsDir, file);
+                    var dstDir = Path.Combine(iconThemeDir, $"{size}x{size}", "apps");
+                    Directory.CreateDirectory(dstDir);
+                    var dst = Path.Combine(dstDir, $"{iconName}.png");
+                    if (File.Exists(src))
+                    {
+                        File.Copy(src, dst, true);
+                    }
+                }
+
+                Directory.CreateDirectory(appsDir);
+                var desktopPath = Path.Combine(appsDir, $"{appId}.desktop");
+                if (!File.Exists(desktopPath))
+                {
+                    File.WriteAllText(desktopPath,
+                        "[Desktop Entry]\nName=Criptografia OpenSSL\nIcon=" + iconName + "\nType=Application\nCategories=Utility;\nNoDisplay=true\n");
+                }
+
+                SetIconName(iconName);
+            }
+            catch
+            {
+            }
+        }
+
         private string GetTextViewText(TextView textView)
         {
-            return textView.GetBuffer().Text;
+            return textView.GetBuffer()?.Text ?? string.Empty;
         }
 
         private void SetTextViewText(TextView textView, string text)
